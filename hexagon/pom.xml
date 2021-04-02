@@ -4,13 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>net.runeduniverse</groupId>
-		<artifactId>hexagon</artifactId>
+		<artifactId>hexagon-parent</artifactId>
 		<version>0.1</version>
 	</parent>
 
-	<artifactId>hexagon-core</artifactId>
-
-	<name>Hexagon-Core</name>
+	<artifactId>hexagon</artifactId>
+	<name>Hexagon</name>
 
 	<dependencies>
 		<dependency>
@@ -19,12 +18,20 @@
 			<version>${parent.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>net.runeduniverse.libs</groupId>
 			<artifactId>utils</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>net.runeduniverse.libs</groupId>
 			<artifactId>utils-async</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.mojang</groupId>
+			<artifactId>authlib</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.reflections</groupId>

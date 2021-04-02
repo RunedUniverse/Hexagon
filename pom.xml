@@ -4,15 +4,14 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>net.runeduniverse</groupId>
-	<artifactId>hexagon</artifactId>
+	<artifactId>hexagon-parent</artifactId>
 	<version>0.1</version>
 	<packaging>pom</packaging>
-	<name>Hexagon</name>
 	<description>Hexagon is primarily the Minecraft Server Module for RunedUniverse's HexSocket but also supports standalone deployment</description>
 
 	<modules>
 		<module>hexagon-api</module>
-		<module>hexagon-core</module>
+		<module>hexagon</module>
 	</modules>
 
 	<properties>
@@ -20,6 +19,10 @@
 	</properties>
 
 	<repositories>
+		<repository>
+			<id>minecraft</id>
+			<url>https://libraries.minecraft.net/</url>
+		</repository>
 		<repository>
 			<id>runeduniverse-releases</id>
 			<url>https://nexus.runeduniverse.net/repository/maven-releases/</url>
@@ -35,6 +38,16 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-all</artifactId>
+				<version>4.1.63.Final</version>
+			</dependency>
+			<dependency>
+				<groupId>com.mojang</groupId>
+				<artifactId>authlib</artifactId>
+				<version>1.5.25</version>
+			</dependency>
 			<dependency>
 				<groupId>net.runeduniverse.libs</groupId>
 				<artifactId>utils</artifactId>
